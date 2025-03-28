@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - Parents Tranquilles</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body >
+      <!-- Navbar -->
+      <nav class="bg-white shadow-md py-4">
+        <div class="container mx-auto flex justify-between items-center px-6">
+            <a href="#" class="text-2xl font-bold text-orange-600">Parents Tranquilles</a>
+            <div class="space-x-6 hidden md:flex">
+                <a href="#" class="text-gray-700 hover:text-orange-500">Accueil</a>
+                <a href="#" class="text-gray-700 hover:text-orange-500">À propos</a>
+                <a href="#" class="text-gray-700 hover:text-orange-500">Contact</a>
+                <a href="formulaire.html" class="bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition">S'inscrire</a>
+                <a href="moncompte.html" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition">Mon Compte</a>
+            </div>
+            <button class="md:hidden text-gray-700 focus:outline-none" id="menu-toggle">
+                ☰
+            </button>
+        </div>
+        <div class="hidden md:hidden flex flex-col items-center space-y-4 py-4" id="mobile-menu">
+            <a href="#" class="text-gray-700 hover:text-orange-500">Accueil</a>
+            <a href="#" class="text-gray-700 hover:text-orange-500">À propos</a>
+            <a href="#" class="text-gray-700 hover:text-orange-500">Contact</a>
+            <a href="inscription.html" class="bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition">S'inscrire</a>
+            <a href="moncompte.html" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition">Mon Compte</a>
+        </div>
+    </nav>
+    
+ <div class="bg-gradient-to-r from-orange-400 to-red-500 flex items-center justify-center min-h-screen">
+
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-lg">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-6">Inscription</h2>
+        
+        <form id="inscriptionForm" class="space-y-4">
+            <div>
+                <label class="block text-gray-700 font-medium">Nom et Prénom</label>
+                <input type="text" id="nom" name="nom" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" required>
+            </div>   
+
+            <div>
+                <label class="block text-gray-700 font-medium">Numéro de téléphone</label>
+                <input type="tel" id="telephone" name="telephone" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" required>
+            </div>
+
+            <div>
+                <label class="block text-gray-700 font-medium">Email</label>
+                <input type="email" id="email" name="email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" required>
+            </div>
+
+            <div>
+                <label class="block text-gray-700 font-medium">Profession</label>
+                <input type="text" id="occupation" name="occupation" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+            </div>
+
+            <div>
+                <label class="block text-gray-700 font-medium">Lieu d'habitation</label>
+                <select id="lieu_habitation" name="lieu_habitation" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" required>
+                    <option value="">Sélectionnez votre commune</option>
+                    <option value="ABOBO">ABOBO</option>
+                    <option value="ADJAMÉ">ADJAMÉ</option>
+                    <option value="ANYAMA">ANYAMA</option>
+                    <option value="ATTÉCOUBÉ">ATTÉCOUBÉ</option>
+                    <option value="BASSAM">BASSAM</option>
+                    <option value="BINGERVILLE">BINGERVILLE</option>
+                    <option value="COCODY">COCODY</option>
+                    <option value="KOUMASSI">KOUMASSI</option>
+                    <option value="MARCORY">MARCORY</option>
+                    <option value="PLATEAU">PLATEAU</option>
+                    <option value="PORT-BOUET">PORT-BOUET</option>
+                    <option value="TREICHVILLE">TREICHVILLE</option>
+                    <option value="SONGON">SONGON</option>
+                    <option value="YOPOUGON">YOPOUGON</option>
+                </select>
+            </div>
+
+            <button type="submit" class="w-full bg-orange-500 text-white py-3 rounded-lg font-semibold hover:bg-orange-600 transition duration-300">
+                S'inscrire
+            </button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("inscriptionForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Empêche le rechargement de la page
+    
+            console.log("Le formulaire a été soumis !");
+    
+            const parent = {
+                nom: document.getElementById("nom").value,
+                email: document.getElementById("email").value,
+                telephone: document.getElementById("telephone").value,
+                occupation: document.getElementById("occupation").value,
+                adresse: document.getElementById("lieu_habitation").value
+            };
+    
+            console.log("Données du parent avant enregistrement :", parent);
+    
+            // Sauvegarde des données dans localStorage
+            localStorage.setItem("parent", JSON.stringify(parent));
+    
+            console.log("Données enregistrées dans localStorage :", localStorage.getItem("parent"));
+    
+            alert("Inscription réussie ! Redirection vers votre compte...");
+            window.location.href = "moncompte.html";
+        });
+        document.getElementById("menu-toggle").addEventListener("click", function() {
+            document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+       
+    </script>
+</div>   
+</body>
+</html>
+
+
+
+
+<!--
+        <nav class="bg-orange-100 text-black flex items-center justify-between px-12 h-16  lg:gap-8">
+            <img class="w-10 h-10 whitespace-nowrap" src="image/WhatsApp Image 2025-02-27 at 15.52.59.jpeg" alt="">
+            <h1 class="text-orange-600 font-bold">Parents Tranquilles</h1>
+
+            <div
+                class="dropdown-menu absolute -top-full left-0 max-lg:bg-orange-100 w-full h-[30vh] flex flex-col gap-6 items-center py-2 text-lg font-bold lg:static lg:flex-row lg:justify-between">
+
+                <ul class="flex flex-col items-center gap-6 lg:flex-row lg:gap-8 lg:ml-[35%] text-orange-900">
+                    <li class="hover:text-orange-600"><a href="accueil.html">Accueil</a></li>
+                    <li class="hover:text-orange-600 whitespace-nowrap"><a href="apropos.html">A Propos</a></li>
+                    <li class="hover:text-orange-600"><a href="contact.html">Contact</a></li>
+                </ul>
+
+                <div>
+                    <button
+                        class=" hover:bg-orange-300 bg-orange-500 text-white rounded-lg px-2 py-1 whitespace-nowrap"><a href="formulaire.html" class="decoration-none">S'inscrire</a></button>
+                        <button  id="openForm"
+                        class=" hover:bg-orange-300 bg-orange-500 text-white rounded-lg px-2 py-1 whitespace-nowrap"><a href="" class="decoration-none">Se connecter</a></button>
+                </div>
+
+
+            </div>
+
+            <div class="toggle-button lg:hidden lg:flex-row lg:gap-8">
+                <i class="fa-solid fa-bars fa-lg"></i>
+            </div>
+        </nav>-->

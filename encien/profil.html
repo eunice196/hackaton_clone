@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affichage de données JSON en cartes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 py-10">
+      <nav class="bg-gray-100 shadow-md py-4">
+        <div class="container mx-auto flex justify-between items-center px-6">
+
+            <div class="flex flex-row gap-5">
+                <img class="w-10 h-10 whitespace-nowrap" src="image/WhatsApp Image 2025-02-27 at 15.52.59.jpeg" alt="">
+                 <a href="#" class="text-2xl font-bold text-orange-600">Parents Tranquilles</a>
+              </div>
+
+            <div class="space-x-6 hidden md:flex">
+                <a href="index.html" class="text-gray-700 hover:text-orange-500">Accueil</a>
+                <a href="apropos.html" class="text-gray-700 hover:text-orange-500">À propos</a>
+                <a href="contact.html" class="text-gray-700 hover:text-orange-500">Contact</a>
+                <a href="profil.html" class="text-gray-700 hover:text-orange-500">Nounou</a>
+                <a href="formulaire.html" class="bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition">S'inscrire</a>
+                <a href="" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition">Connexion</a>
+            </div>
+            <button class="md:hidden text-gray-700 focus:outline-none" id="menu-toggle">
+                ☰
+            </button>
+        </div>
+        <div class="hidden md:hidden flex flex-col items-center space-y-4 py-4" id="mobile-menu">
+            <a href="index.html" class="text-gray-700 hover:text-orange-500">Accueil</a>
+            <a href="apropos.html" class="text-gray-700 hover:text-orange-500">À propos</a>
+            <a href="contact.html" class="text-gray-700 hover:text-orange-500">Contact</a>
+            <a href="formulaire.html" class="bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition">S'inscrire</a>
+            <a href="" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition">Connexion</a>
+        </div>
+    </nav>
+    <div class="bg-orange-200">
+        <h1 class="font-bold text-3xl text-red-500">NB:</h1>
+            <p class="text-xl">Pour réserver une nounou, veuillez copier son Id et l'envoyer au <a href="euniceandreazadi@gmail.com" class="text-xl text-blue-500 underline">euniceandreazadi@gmail.com</a> ou a notre <a class="text-blue-500 underline" href="https://api.whatsapp.com/send?phone=%2B2250500939269&context=AffxkncEkzjrFfsiVwNSD4pX5Bfx5P5WJ9ARQz38ARao8EFYloawyg3YgGiQ63cJFf81Msy2GFpzKoMk54BBDhqR51tDuQ1o5AmrEsG5mkIx7uxQiNpFprvU7ATKJd0aPfncIt-chHQunOQIpW5lycep2A&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwY2xjawJQ2ztleHRuA2FlbQIxMAABHQ7OORohdwz5t7wtb7yWk1S-PyoG_9IhTaupiS9D5YE5drbGt-gruKbgLQ_aem_KhQS8aSR5WhMvmGZ-4hScw">Whatssaps</a> en mentionnant quelques informations sur vous tels que le nom le lieu d'habitation et le jour/l'heure à laquelle vous aurez besoins de la nounou.</p>
+    </div>
+
+
+    <div class="container mt-[5%] mx-auto px-4">
+
+        <h1 class="text-3xl font-bold text-center mb-10">Liste des Nounous</h1>
+
+        <div id="cards-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <!-- Les cartes seront insérées ici -->
+        </div>
+    </div>
+
+
+    <footer class="bg-white py-6 mt-5 text-center">
+        <div class="max-w-6xl mx-auto px-4">
+            <h3 class="text-2xl font-semibold ">Parent-Tranquille</h3>
+            <p class="mt-2 text-xl">Votre solution de nounous d'urgence, disponibles à tout moment pour veiller sur vos enfants.</p>
+            
+            <nav class="mt-4 text-xl">
+                <a href="index.html" class="mx-3 hover:underline">À propos</a>
+                <a href="/services" class=" mx-3 hover:underline">Nos services</a>
+                <a href="/contact" class=" mx-3 hover:underline">Contact</a>
+                <a href="/faq" class="mx-3 hover:underline">FAQ</a>
+            </nav>
+    
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="https://www.facebook.com/profile.php?id=61574600934646" target="_blank">
+                     <img src="image/téléchargement.png" alt="" class="w-6">
+                </a>
+    
+                <a href="https://api.whatsapp.com/send?phone=%2B2250500939269&context=AffxkncEkzjrFfsiVwNSD4pX5Bfx5P5WJ9ARQz38ARao8EFYloawyg3YgGiQ63cJFf81Msy2GFpzKoMk54BBDhqR51tDuQ1o5AmrEsG5mkIx7uxQiNpFprvU7ATKJd0aPfncIt-chHQunOQIpW5lycep2A&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwY2xjawJQ2ztleHRuA2FlbQIxMAABHQ7OORohdwz5t7wtb7yWk1S-PyoG_9IhTaupiS9D5YE5drbGt-gruKbgLQ_aem_KhQS8aSR5WhMvmGZ-4hScw" target="_blank">
+                    <img src="image/téléchargement.jpeg" alt="" class="w-6"> 
+                </a>
+    
+                <a href="#" target="_blank">
+                    <img src="image/téléchargement (2).png" alt="" class="w-6">
+                </a>
+            </div>
+    
+            <p class=" text-sm mt-4">&copy; 2025 Parent-Tranquille. Tous droits réservés.</p>
+        </div>
+    </footer>
+    <script>
+        // Données JSON exemple
+        const personnes = [
+            {
+                nom: "Affoué Konan",
+                photo: "https://media.istockphoto.com/id/609608134/photo/woman-with-basket-and-cleaning-equipment.jpg?s=612x612&w=0&k=20&c=9a6DIVAdZnS8tRQ9UA5wWsvIvexqq8jyGq2woKzUyWE=",
+                description: "Cuisine, fait la vaisselles et la lessive uniquement pour l'enfant depuis 2 ans. Disponible 24h/24",
+                ID: "579afko"
+            },
+            {
+                nom: "Soumahoro Fanta",
+                photo: "https://www.shutterstock.com/image-photo/african-village-teenager-girl-braids-260nw-2455804299.jpg",
+                description: "S'occupe des bébé de 1 à 4 ans depuis 5 ans. Uniquement pour la journée",
+                ID: "678sofa"
+            },
+            {
+                nom: "Kouadio Amenan",
+                photo: "https://media.istockphoto.com/id/1485050002/fr/photo/portrait-dune-femme-noire-adulte-%C3%A2g%C3%A9e-dans-une-rue-de-la-ville-regardant-la-cam%C3%A9ra.jpg?s=612x612&w=0&k=20&c=hzZ9J2XwibWl2MeHcH3KWptQL14Kodj0yhtw1r8zJ_I=",
+                description: "Assistante matenelle depuis 8 ans. Disponible 24h/24",
+                ID: "111koam"
+            },
+            {
+                nom: "Coulibaly Sophia",
+                photo: "https://img.freepik.com/photos-gratuite/femme-africaine-gaie-dans-verres-recherche-sourire-heureux-au-camer_574295-6169.jpg",
+                description: "Nounou de veille d'enfants de 4 à 10 ans depuis 5 ans. Disponible de 18h à 6h",
+                ID: "194coso"
+            },
+            {
+                nom: "Aminata Konan",
+                photo: "https://www.shutterstock.com/image-photo/young-african-woman-portrait-standing-260nw-2121048998.jpg",
+                description: "Nounou depuis 2 ans s'occupant des enfants de 2 à 5 ans. Disponible 24h/24",
+                ID: "037amiko"
+            },
+            {
+                nom: "Mariam Coulibaly",
+                photo: "https://www.shutterstock.com/image-photo/african-woman-working-fields-village-260nw-1973559101.jpg",
+                description: "Nounou s'occupant des enfants de 4 à 10 ans depuis 5 ans. Disponible 24h/24",
+                ID: "967Maco"
+            },
+            {
+                nom: "Aminata Konan",
+                photo: "https://www.shutterstock.com/image-photo/young-african-woman-portrait-standing-260nw-2121048998.jpg",
+                description: "Nounou depuis 2 ans s'occupant des enfants de 2 à 5 ans. Disponible 24h/24",
+                ID: "037amiko"
+            },
+
+            {
+                nom: "Amina Ouattara",
+                photo: "https://www.shutterstock.com/image-photo/village-young-african-girl-red-260nw-2460115105.jpg",
+                description: "Nounou depuis 2 ans s'occupant des enfants de 1 à 10 ans. Disponible 24h/24. Nb: elle ne fait pas la cuisine.",
+                ID: "789amiou"
+            },
+            {
+                nom: "Aminata Konan Siahoue",
+                photo: "https://c8.alamy.com/compfr/2tbk3r1/village-jeune-femme-africaine-avec-des-tresses-devant-sa-cabane-de-cuisine-en-plein-air-dans-la-cour-2tbk3r1.jpg",
+                description: "Nounou depuis 2 ans s'occupant des enfants de 2 à 5 ans. Elle ne fait pas la lessive",
+                ID: "186amsi"
+            },
+            {
+                nom: "Konan Nafissatou",
+                photo: "https://c8.alamy.com/compfr/2tbk3mw/village-jeune-femme-africaine-avec-des-tresses-devant-sa-maison-2tbk3mw.jpg",
+                description: "Nounou depuis 2 ans s'occupant des enfants de 1 à 8 ans. Disponible de 7h à 22h",
+                ID: "136kona"
+            },
+            {
+                nom: "Niangoran Konan",
+                photo: "https://media.istockphoto.com/id/491562812/fr/photo/superbe-adolescente-africaine-noire-portrait-de-lenvironnement-symbole-de-l%C3%A9cole.jpg?s=612x612&w=0&k=20&c=Q9Zp3Eqpo0SZk-Y2cQJcwFhF2zHL23t-CgtNhuCH1Pk=",
+                description: "Babysitter des enfats de 1 à 9 ans. Disponible de 6h à 15h",
+                ID: "834niko"
+            },
+            {
+                nom: "Affoué Coulibaly",
+                photo: "https://www.shutterstock.com/image-photo/young-african-woman-portrait-standing-260nw-2121048998.jpg",
+                description: "Nounou depuis 2 ans s'occupant des enfants de 2 à 5 ans.",
+                ID: "037affco"
+            },
+            {
+                nom: "Amin Koué",
+                photo: "https://www.shutterstock.com/image-photo/african-woman-working-fields-village-260nw-1973559101.jpg",
+                description: "Nounou de veille depuis 3 ans s'occupant des enfants de 2 à 5 ans. Disponible de 18h à 5h",
+                ID: "058am50k"
+            },
+            {
+                nom: "Nanan Sophia",
+                photo: "https://media.istockphoto.com/id/609608134/photo/woman-with-basket-and-cleaning-equipment.jpg?s=612x612&w=0&k=20&c=9a6DIVAdZnS8tRQ9UA5wWsvIvexqq8jyGq2woKzUyWE=",
+                description: "Nounou depuis 2 ans s'occupant des enfants de 2 à 5 ans. ",
+                ID: "037amiko"
+            },
+
+            
+        ];
+
+      document.getElementById("menu-toggle").addEventListener("click", function() {
+            document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+
+        // Fonction pour générer et afficher les cartes
+        const displayCards = () => {
+            const container = document.getElementById("cards-container");
+            personnes.forEach(personne => {
+                const card = `
+                    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                        <img src="${personne.photo}" ${personne.nom}" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h2 class="text-xl font-semibold"> ${personne.nom}</h2>
+                            <p class="text-gray-600 mt-2">${personne.description}</p>
+                            <p class="text-gray-600 mt-2">${personne.ID}</p>
+                        </div>
+                    </div>
+                `;
+                container.innerHTML += card;
+            });
+        };
+
+        // Appel de la fonction pour afficher les cartes
+        displayCards();
+    </script>
+
+</body>
+</html>

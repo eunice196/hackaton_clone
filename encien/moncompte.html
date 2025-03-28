@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Compte - Parents Tranquilles</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+     <!-- Navbar -->
+     <nav class="bg-gray-100 shadow-md py-4">
+        <div class="container mx-auto flex justify-between items-center px-6">
+
+            <div class="flex flex-row gap-5">
+              <img class="w-10 h-10 whitespace-nowrap" src="hackaton_clone/Hackaton-group/images/WhatsApp Image 2025-02-27 at 15.52.59.jpeg" alt="">
+               <a href="#" class="text-2xl font-bold text-orange-600">Parents Tranquilles</a>
+            </div>
+            <div class="space-x-6 hidden md:flex">
+                <a href="index.html" class="text-gray-700 hover:text-orange-500">Accueil</a>
+                <a href="apropos.html" class="text-gray-700 hover:text-orange-500">À propos</a>
+                <a href="contact.html" class="text-gray-700 hover:text-orange-500">Contact</a>
+                <a href="formulaire.html" class="bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition">S'inscrire</a>
+                <a href="moncompte.html" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition">Mon Compte</a>
+            </div>
+            <button class="md:hidden text-gray-700 focus:outline-none" id="menu-toggle">
+                ☰
+            </button>
+        </div>
+        <div class="hidden md:hidden flex flex-col items-center space-y-4 py-4" id="mobile-menu">
+            <a href="index.html" class="text-gray-700 hover:text-orange-500">Accueil</a>
+            <a href="apropos.html" class="text-gray-700 hover:text-orange-500">À propos</a>
+            <a href="contact.html" class="text-gray-700 hover:text-orange-500">Contact</a>
+            <a href="formulaire.html" class="bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition">S'inscrire</a>
+            <a href="moncompte.html" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition">Mon Compte</a>
+        </div>
+    </nav>
+
+
+    <div class="max-w-5xl mx-auto mt-10 bg-white p-6 rounded-lg shadow-md flex flex-col md:flex-row  ">
+        
+        <!-- Informations du parent (Gauche) -->
+        <div class="w-3/3 bg-gray-200 p-4 rounded-lg md:w-1/3">
+            <h3 class="text-xl font-semibold mb-2">Mes Informations</h3>
+            <p><strong>Nom :</strong> <span id="parentName"></span></p>
+            <p><strong>Email :</strong> <span id="parentEmail"></span></p>
+            <p><strong>Téléphone :</strong> <span id="parentPhone"></span></p>
+            <p><strong>Adresse :</strong> <span id="parentAddress"></span></p>
+            <a href="#" class="block mt-2 px-4 py-2 bg-blue-500 text-white rounded-lg text-center">Modifier mes informations</a>
+        </div>
+        
+        <!-- Corps de la page (Droite) -->
+        <div class=" text-center w-3/3 md:w-1/3 md:pl-6">
+            <h2 class="text-center text-3xl font-bold mb-6">Mon Compte</h2>
+            
+            <!-- Commander une nounou -->
+            <div class="bg-gray-100 p-4 rounded-lg mb-6">
+                <h3 class="text-xl font-semibold mb-4">Commander une Nounou</h3>
+                <form id="nounouForm" class="space-y-4">
+
+                    <label class="block">
+                        <span class="text-gray-700">Nombre d'enfants :</span>
+                        <input type="number" id="childCount" min="1" class="mt-1 block w-full p-2 border rounded-lg" placeholder="Ex: 2">
+                    </label>
+                    
+                    <div id="childrenDetails"></div>
+
+                    
+                    <label class="block">
+                        <span class="text-gray-700">Type de garde :</span>
+                        <select id="gardeType" class="mt-1 block w-full p-2 border rounded-lg">
+                            <option>Journée</option>
+                            <option>Soirée</option>
+                            <option>Week-end</option>
+                            <option>Urgence</option>
+                        </select>
+                    </label>
+                    <label class="block">
+                        <span class="text-gray-700">Expérience minimum souhaitée :</span>
+                        <select id="experience" class="mt-1 block w-full p-2 border rounded-lg">
+                            <option>Peu importe</option>
+                            <option>1-3 ans</option>
+                            <option>3-5 ans</option>
+                            <option>5 ans et plus</option>
+                        </select>
+                    </label>
+                    <label class="block">
+                        <span class="text-gray-700">Langue parlée :</span>
+                        <input type="text" id="langue" class="mt-1 block w-full p-2 border rounded-lg" placeholder="Ex: Français, Anglais">
+                    </label>
+                    <button type="submit" class="w-full px-4 py-2 bg-green-500 text-white rounded-lg"><a href="profil.html" class="">Trouver une nounou</a></button>
+                </form>
+            </div>
+            
+            <!-- Suivi des demandes en cours -->
+            <div class="bg-gray-100 p-4 rounded-lg mb-6">
+                <h3 class="text-xl font-semibold mb-2">Mes Demandes en Cours</h3>
+                <p id="demandes" class="text-gray-600">Aucune demande en cours.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const parentData = JSON.parse(localStorage.getItem("parent"));
+            if (parentData) {
+                document.getElementById("parentName").textContent = parentData.nom || "Non renseigné";
+                document.getElementById("parentEmail").textContent = parentData.email || "Non renseigné";
+                document.getElementById("parentPhone").textContent = parentData.telephone || "Non renseigné";
+                document.getElementById("parentAddress").textContent = parentData.adresse || "Non renseigné";
+            } else {
+            console.warn("Aucune donnée trouvée pour le parent.");
+        }
+        });
+
+        document.getElementById("menu-toggle").addEventListener("click", function() {
+            document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+
+
+
+
+        document.getElementById("childCount").addEventListener("input", function() {
+                const count = parseInt(this.value) || 0;
+                const container = document.getElementById("childrenDetails");
+                container.innerHTML = "";
+                for (let i = 1; i <= count; i++) {
+                    container.innerHTML += `
+                        <label class="block mt-2">
+                            <span class="text-gray-700">Âge de l'enfant ${i} :</span>
+                            <input type="number" name="childAge" class="mt-1 block w-full p-2 border rounded-lg" placeholder="Ex: 3">
+                        </label>`;
+                }
+            });
+    </script>
+</body>
+</html>

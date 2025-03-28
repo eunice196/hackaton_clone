@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="relative bg-gray-200 font-sans text-orange-900">
+
+    <header class="bg-[url(https://img.freepik.com/photos-premium/jeune-femme-detournant-yeux_1048944-4112427.jpg?uid=R191135190&ga=GA1.1.589046171.1741712631)] relative top-0 w-full  bg-cover bg-no-repeat h-[330px] md:h-[600px] md:bg-cover md:w-full lg:h-[1000px] lg:w-full lg:bg-cover ">
+      
+      
+
+       <!-- Navbar -->
+    <nav class="bg-gray-100 shadow-md py-4">
+        <div class="container mx-auto flex justify-between items-center px-6">
+
+            <div class="flex flex-row gap-5">
+                <img class="w-10 h-10 whitespace-nowrap" src="image/WhatsApp Image 2025-02-27 at 15.52.59.jpeg" alt="">
+                 <a href="#" class="text-2xl font-bold text-orange-600">Parents Tranquilles</a>
+              </div>
+
+            <div class="space-x-6 hidden md:flex">
+                <a href="index.html" class="text-gray-700 hover:text-orange-500">Accueil</a>
+                <a href="apropos.html" class="text-gray-700 hover:text-orange-500">À propos</a>
+                <a href="contact.html" class="text-gray-700 hover:text-orange-500">Contact</a>
+                <a href="profil.html" class="text-gray-700 hover:text-orange-500">Nounou</a>
+                <a href="formulaire.html" class="bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition">S'inscrire</a>
+                <a href="" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition">Connexion</a>
+            </div>
+            <button class="md:hidden text-gray-700 focus:outline-none" id="menu-toggle">
+                ☰
+            </button>
+        </div>
+        <div class="hidden md:hidden flex flex-col items-center space-y-4 py-4" id="mobile-menu">
+            <a href="index.html" class="text-gray-700 hover:text-orange-500">Accueil</a>
+            <a href="apropos.html" class="text-gray-700 hover:text-orange-500">À propos</a>
+            <a href="contact.html" class="text-gray-700 hover:text-orange-500">Contact</a>
+            <a href="formulaire.html" class="bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition">S'inscrire</a>
+            
+            <div class="relative inline-block text-left">
+                <button onclick="toggleLogin()" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+                  Connexion
+                </button>
+                <div id="loginMenu" class="absolute right-0 mt-2 w-80 bg-white border border-gray-200 rounded-xl shadow-lg p-4 hidden z-10">
+                  <h3 class="text-lg font-semibold mb-3">Connexion</h3>
+                  <input type="email" id="loginEmail" placeholder="Email" class="w-full mb-3 px-3 py-2 border rounded-md" />
+                  <button onclick="login()" class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700">
+                    Se connecter
+                  </button>
+                  <p class="text-sm text-gray-500 mt-2">Pas encore inscrit ? <a href="formulaire.html" class="text-blue-600 underline">Inscrivez-vous</a></p>
+                </div>
+              </div>
+
+        </div>
+    </nav>
+     <div>
+        <p class="text-3xl md:text-6xl lg:text-8xl font font-bold text-center pt-[100px] md:pt-[200px] lg:pt-[300px] bg-shadow-lg bg-orange-100/50 text-orange-500 ">Contactez-nous!</p>  
+     </div>
+ </header>
+
+ <main>
+     <div class="max-w-4xl mx-auto px-6 py-12">
+        <!-- Titre -->
+        <h1 class="text-3xl font-bold text-center text-orange-900 lg:text-5xl"></h1>
+        <p class="text-center text-gray-600 mt-2 text-l">Besoin d'une nounou d'urgence ? Voici comment nous joindre.</p>
+
+        <!-- Section Horaires -->
+     <section class="grid grid-col lg:grid-cols-2 lg:gap-8 text-orange-900">
+         <div class="bg-white p-6 rounded-lg shadow-md mt-6 lg:text-xl ">
+              <h2 class="text-3xl font-semibold text-orange-900">🕒 Quand nous contacter ?</h2>
+              <p class=" mt-2 lg:text-xl">Nos services sont disponibles :</p>
+              <ul class="mt-2 lg:text-xl">
+                 <li>✅ Lundi - Vendredi : 7h00 - 22h00</li>
+                 <li>✅ Week-end & jours fériés : 8h00 - 20h00</li>
+                 <li>✅ Urgences : 24h/24 via notre formulaire</li>
+             </ul>
+         </div>
+
+          <!-- Section Moyens de Contact -->
+          <div class="bg-white p-6 rounded-lg shadow-md mt-6 lg:text-xl">
+              <h2 class="text-3xl font-semibold text-orange-900">📞 Nos moyens de contact</h2>
+              <p class=" mt-2 lg:text-xl">Vous pouvez nous joindre par :</p>
+              <ul class="mt-2 lg:text-xl">
+                 <li>📧 Email : <a href="mailto:contact@parent-tranquille.com" class="text-orange-600 font-semibold">contact@parent-tranquille.com</a></li>
+                 <li>📞 Téléphone : <span class="font-semibold">+225 01 522 243 41</span></li>
+             </ul>
+         </div>
+     </section>
+        <!-- Formulaire de Contact -->
+        <div class="bg-white p-6 rounded-lg shadow-md mt-6 lg:text-xl">
+            <h2 class="lg:text-3xl font-semibold text-orange-900 ">📩 Laissez-nous un message</h2>
+            <p class="lg:text-xl mt-2">Remplissez ce formulaire et nous vous répondrons rapidement.</p>
+            
+            <form id="contact-form" method="POST" onsubmit="envoyerMessage(event)" class= "mt-4">
+                <div class="mb-4">
+                    <label class="block text-orange-900 font-medium">Nom et Prénom</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded mt-1" placeholder="Votre nom">
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-orange-900 font-medium">Email</label>
+                    <input type="email" class="w-full p-2 border border-gray-300 rounded mt-1" placeholder="Votre email">
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-orange-900 font-medium">Message</label>
+                    <textarea class="w-full p-2 border border-gray-300 rounded mt-1" rows="4" placeholder="Votre message"></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-orange-500 text-white py-2 rounded hover:bg-orange-600 transition">
+                    Envoyer
+                </button>
+            </form>
+        </div>
+     </div>
+ </main>
+
+ <footer class="bg-white py-6 text-center">
+    <div class="max-w-6xl mx-auto px-4">
+        <h3 class="text-2xl font-semibold ">Parent-Tranquille</h3>
+        <p class="mt-2 text-xl">Votre solution de nounous d'urgence, disponibles à tout moment pour veiller sur vos enfants.</p>
+        
+        <nav class="mt-4 text-xl">
+            <a href="index.html" class="mx-3 hover:underline">À propos</a>
+            <a href="/services" class=" mx-3 hover:underline">Nos services</a>
+            <a href="/contact" class=" mx-3 hover:underline">Contact</a>
+            <a href="/faq" class="mx-3 hover:underline">FAQ</a>
+        </nav>
+
+        <div class="flex justify-center space-x-4 mt-4">
+            <a href="https://www.facebook.com/profile.php?id=61574600934646" target="_blank">
+                 <img src="image/téléchargement.png" alt="" class="w-6">
+            </a>
+
+            <a href="https://api.whatsapp.com/send?phone=%2B2250500939269&context=AffxkncEkzjrFfsiVwNSD4pX5Bfx5P5WJ9ARQz38ARao8EFYloawyg3YgGiQ63cJFf81Msy2GFpzKoMk54BBDhqR51tDuQ1o5AmrEsG5mkIx7uxQiNpFprvU7ATKJd0aPfncIt-chHQunOQIpW5lycep2A&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwY2xjawJQ2ztleHRuA2FlbQIxMAABHQ7OORohdwz5t7wtb7yWk1S-PyoG_9IhTaupiS9D5YE5drbGt-gruKbgLQ_aem_KhQS8aSR5WhMvmGZ-4hScw" target="_blank">
+                <img src="image/téléchargement.jpeg" alt="" class="w-6"> 
+            </a>
+
+            <a href="#" target="_blank">
+                <img src="image/téléchargement (2).png" alt="" class="w-6">
+            </a>
+        </div>
+</footer>
+
+</footer>
+ <script>
+   document.getElementById("menu-toggle").addEventListener("click", function() {
+            document.getElementById("mobile-menu").classList.toggle("hidden");
+        }); 
+
+        function toggleLogin() {
+      const menu = document.getElementById("loginMenu");
+      menu.classList.toggle("hidden");
+
+      const email = localStorage.getItem("parentEmail");
+      if (email) {
+        document.getElementById("loginEmail").value = email;
+      }
+    }
+
+    function login() {
+      const email = document.getElementById("loginEmail").value;
+      const emailSaved = localStorage.getItem("parentEmail");
+
+      if (!email) {
+        alert("Veuillez entrer votre email.");
+        return;
+      }
+
+      if (emailSaved && email === emailSaved) {
+        alert("Connexion réussie !");
+      } else {
+        alert("Email inconnu. Veuillez vous inscrire.");
+        window.location.href = "formulaire.html";
+      }
+    }
+
+    window.addEventListener('click', function(e) {
+      const menu = document.getElementById("loginMenu");
+      const button = document.querySelector('button');
+      if (!menu.contains(e.target) && !button.contains(e.target)) {
+        menu.classList.add("hidden");
+      }
+    });
+
+    function envoyerMessage(event) {
+            event.preventDefault(); // Empêche le rechargement de la page
+            alert("Message envoyé !");
+            document.getElementById("contact-form").reset(); // Réinitialise le formulaire
+        }
+ </script>
+</body>
+</html>
+
+
+ 

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À PROPOS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="relative bg-gray-200 font-sans">
+
+    <header class="bg-[url(https://img.freepik.com/photos-premium/mere-afro-americaine-heureuse-sa-petite-fille-jouant-maison_116547-95665.jpg?ga=GA1.1.589046171.1741712631&semt=ais_hybrid)] relative top-0 w-full  bg-cover bg-no-repeat h-[330px] md:h-[600px] md:bg-cover md:w-full lg:h-[1000px] lg:w-full lg:bg-cover ">
+      <!-- Navbar -->
+    <nav class="bg-gray-100 shadow-md py-4">
+        <div class="container mx-auto flex justify-between items-center px-6">
+
+            <div class="flex flex-row gap-5">
+                <img class="w-10 h-10 whitespace-nowrap" src="image/WhatsApp Image 2025-02-27 at 15.52.59.jpeg" alt="">
+                 <a href="#" class="text-2xl font-bold text-orange-600">Parents Tranquilles</a>
+              </div>
+
+            <div class="space-x-6 hidden md:flex">
+                <a href="index.html" class="text-gray-700 hover:text-orange-500">Accueil</a>
+                <a href="apropos.html" class="text-gray-700 hover:text-orange-500">À propos</a>
+                <a href="contact.html" class="text-gray-700 hover:text-orange-500">Contact</a>
+                <a href="profil.html" class="text-gray-700 hover:text-orange-500">Nounou</a>
+                <a href="formulaire.html" class="bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition">S'inscrire</a>
+                
+
+                <div class="relative inline-block text-left">
+                    <button onclick="toggleLogin()" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+                      Connexion
+                    </button>
+                    <div id="loginMenu" class="absolute right-0 mt-2 w-80 bg-white border border-gray-200 rounded-xl shadow-lg p-4 hidden z-10">
+                      <h3 class="text-lg font-semibold mb-3">Connexion</h3>
+                      <input type="email" id="loginEmail" placeholder="Email" class="w-full mb-3 px-3 py-2 border rounded-md" />
+                      <button onclick="login()" class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700">
+                        Se connecter
+                      </button>
+                      <p class="text-sm text-gray-500 mt-2">Pas encore inscrit ? <a href="formulaire.html" class="text-blue-600 underline">Inscrivez-vous</a></p>
+                    </div>
+                </div>
+                
+            </div>
+            <button class="md:hidden text-gray-700 focus:outline-none" id="menu-toggle">
+                ☰
+            </button>
+        </div>
+        <div class="hidden md:hidden flex flex-col items-center space-y-4 py-4" id="mobile-menu">
+            <a href="index.html" class="text-gray-700 hover:text-orange-500">Accueil</a>
+            <a href="apropos.html" class="text-gray-700 hover:text-orange-500">À propos</a>
+            <a href="contact.html" class="text-gray-700 hover:text-orange-500">Contact</a>
+            <a href="formulaire.html" class="bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition">S'inscrire</a>
+            <a href="moncompte.html" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition">Mon Compte</a>
+        </div>
+    </nav>
+     <div>
+        <p class="text-3xl md:text-6xl lg:text-8xl font font-bold text-center pt-[100px] md:pt-[200px] lg:pt-[300px] bg-shadow-lg bg-orange-100/50 text-orange-500 ">À Propos de nous</p>  
+     </div>
+ </header>
+ <main>
+    <div class="lg:text-center pt-[40px] md:pt-0 ">
+    
+        <p class="text-left text-l ml-0 gap-3  p-3  text-orange-900 md:mx-4 lg:text-3xl lg:mt-5 lg:text-orange-900 lg:mx-4 lg:pt-5 lg:pr-8 ">
+         PARENTS-TRANQUILLES est une structure qui vous accompagne avec des services de baby-sitting et de nounou de veille.
+         Que ce soit pour veiller sur vos enfants pendant la nuit, vous assister après l’arrivée de votre bébé ou répondre à une urgence de dernière minute, nous sommes là pour vous.
+         Sécurité, bienveillance et disponibilité : c’est notre engagement pour vous et vos petits trésors.<br> <br>
+
+         Chez PARENTS-TRANQUILLES nous savons à quel point il est essentiel pour les parents de trouver une personne de confiance pour garder leurs enfants. Notre mission est de vous offrir une solution simple, sécurisée et flexible pour répondre à vos besoins de garde.
+         Nous sélectionnons avec soin des nounous qualifiées, expérimentées et bienveillantes, afin de garantir un service de qualité qui respecte vos attentes et le bien-être de vos enfants. Que ce soit pour une garde ponctuelle, régulière ou d’urgence, nous nous engageons à vous apporter tranquillité d’esprit et sérénité.
+         Parce que la sécurité et le bonheur de vos enfants sont notre priorité, nous veillons à ce que chaque baby-sitter soit rigoureusement vérifiée et formée aux bonnes pratiques de garde. Avec PARENTS-TRANQUILLES, vous pouvez sortir l’esprit tranquille, en étant rassuré que votre enfant est entre de bonnes mains.<br> <br>
+       </p> 
+       <p class="text-center text-4xl  gap-3  p-3  text-orange-500 md:text-center lg:text-5xl lg:mt-5 lg:text-orange-500 lg:text-center lg:pt-10 underline"> Nos Services</p>
+       <p class= "md:text-left text-left gap-3  p-3  text-orange-900 md:mx-4 lg:text-3xl lg:mt-5 lg:text-orange-900 lg:mx-4 lg:pt-10">
+        – Garde d’enfants à domicile, en dessous de 2 ans  avec un personnel spécialisé<br>
+        – Accompagnement des enfants de 3 ans et + à l'école<br>
+        – Toilettes et soins de l'enfant.<br>
+        – Préparation du repas de l'enfant uniquement.<br><br>
+        
+        <p class="text-orange-500 text-l  gap-3  p-3 md:mx-4 lg:text-3xl lg:mx-4 ">Nous intervenons du lundi au dimanche entre 6h et 22h.</p>
+      </p>
+    </div>
+
+    <div class="columns sm:column-1 md:columns-2 lg:columns-2 lg:ml-[3%] mx-4">
+     <div class="conteneur">
+        <div><img src="nounoubain.avif" alt="" class="rounded-lg"></div>
+        <div><img src="nounoubb.avif" alt="" class="pt-8 rounded-lg"></div>
+        <div><img src="ecole nounou.avif" alt="" class="pt-8 md:pt-0 rounded-lg "></div>
+        <div><img src="nourriturenounou.avif" alt="" class="pt-8 rounded-lg"></div>
+     </div>
+    </div>
+    <div class="md:text-left text-left gap-3  p-3  text-orange-900 md:mx-4 lg:text-3xl lg:mt-5 lg:text-orange-900 lg:mx-4 lg:pt-6">
+       <p class="text-center text-4xl  gap-3  p-3  text-orange-500 md:text-center lg:text-5xl lg:mt-5 lg:text-orange-500 lg:text-center lg:pt-8 underline"> Nos Nounous</p>
+       <p class= "md:text-left text-left gap-3  p-3  text-orange-900 md:mx-4 lg:text-3xl lg:mt-5 lg:text-orange-900 lg:mx-4 lg:pt-10">Chez Parent-Tranquille, la sécurité et le bien-être des enfants sont notre priorité absolue. C'est pourquoi nous appliquons un processus de recrutement rigoureux pour sélectionner nos nounous d'urgence.<br>
+
+         <div class="font-bold text-3xl lg:text-4xl lg:pt-8">Sélection stricte et critères exigeants</div><br>
+          Chaque candidate passe par plusieures étapes avant de rejoindre notre équipe :<br><br>
+
+         <div class="font-bold">✅ Expérience professionnelle vérifiée</div>  Nous privilégions les profils ayant une solide expérience dans la garde d'enfants, que ce soit en crèche, en école maternelle ou en tant que nounou professionnelle.<br><br>
+
+         <div class="font-bold">✅ Vérification des antécédents</div>  Un contrôle approfondi est effectué afin de garantir l’absence de tout antécédent pouvant compromettre la sécurité des enfants.<br><br>
+
+         <div class="font-bold">✅Certifications et compétences</div>  Nous favorisons les nounous formées aux gestes de premiers secours et ayant des certifications en petite enfance.<br><br>
+
+         <div class="font-bold">✅Approfondi et mise en situation</div> Nous évaluons non seulement les compétences techniques, mais aussi la bienveillance, la patience et la capacité d’adaptation face aux urgences.<br><br>
+
+         <div> Grâce à ces exigences, nous garantissons aux parents une prise en charge rapide et en toute confiance de leurs enfants, même en cas d’imprévu.</div>
+    </p>
+        
+    </div>
+ </main>
+ <footer>
+
+    <footer class="bg-white py-6 text-center text-orange-900">
+        <div class="max-w-6xl mx-auto px-4">
+            <h3 class="text-2xl font-semibold ">Parent-Tranquille</h3>
+            <p class="mt-2 text-xl">Votre solution de nounous d'urgence, disponibles à tout moment pour veiller sur vos enfants.</p>
+            
+            <nav class="mt-4 text-xl">
+                <a href="index.html" class=" mx-3 hover:underline">À propos</a>
+                <a href="/services" class="mx-3 hover:underline">Nos services</a>
+                <a href="/contact" class="mx-3 hover:underline">Contact</a>
+                <a href="/faq" class="mx-3 hover:underline">FAQ</a>
+            </nav>
+    
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="https://www.facebook.com/profile.php?id=61574600934646" target="_blank">
+                     <img src="image/téléchargement.png" alt="" class="w-6">
+                </a>
+    
+                <a href="https://api.whatsapp.com/send?phone=%2B2250500939269&context=AffxkncEkzjrFfsiVwNSD4pX5Bfx5P5WJ9ARQz38ARao8EFYloawyg3YgGiQ63cJFf81Msy2GFpzKoMk54BBDhqR51tDuQ1o5AmrEsG5mkIx7uxQiNpFprvU7ATKJd0aPfncIt-chHQunOQIpW5lycep2A&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwY2xjawJQ2ztleHRuA2FlbQIxMAABHQ7OORohdwz5t7wtb7yWk1S-PyoG_9IhTaupiS9D5YE5drbGt-gruKbgLQ_aem_KhQS8aSR5WhMvmGZ-4hScw" target="_blank">
+                    <img src="image/téléchargement.jpeg" alt="" class="w-6"> 
+                </a>
+    
+                <a href="#" target="_blank">
+                    <img src="image/téléchargement (2).png" alt="" class="w-6">
+                </a>
+            </div>
+    
+            <p class="text-sm mt-4">&copy; 2025 Parent-Tranquille. Tous droits réservés.</p>
+        </div>
+    </footer>
+ </footer>
+
+ <script>
+      document.getElementById("menu-toggle").addEventListener("click", function() {
+            document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+
+        function toggleLogin() {
+      const menu = document.getElementById("loginMenu");
+      menu.classList.toggle("hidden");
+
+      const email = localStorage.getItem("parentEmail");
+      if (email) {
+        document.getElementById("loginEmail").value = email;
+      }
+    }
+
+    function login() {
+      const email = document.getElementById("loginEmail").value;
+      const emailSaved = localStorage.getItem("parentEmail");
+
+      if (!email) {
+        alert("Veuillez entrer votre email.");
+        return;
+      }
+
+      if (emailSaved && email === emailSaved) {
+        alert("Connexion réussie !");
+      } else {
+        alert("Email inconnu. Veuillez vous inscrire.");
+        window.location.href = "formulaire.html";
+      }
+    }
+
+    window.addEventListener('click', function(e) {
+      const menu = document.getElementById("loginMenu");
+      const button = document.querySelector('button');
+      if (!menu.contains(e.target) && !button.contains(e.target)) {
+        menu.classList.add("hidden");
+      }
+    });
+
+
+ </script>
+</body>
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="/src/output.css">
+
+<script src="https://cdn.tailwindcss.com"></script>
+    </head>
+
+<body class="bg-orange-700 font-sans ">
+    <header>
+         <!-- Navbar -->
+    <nav class="bg-gray-100 shadow-md py-4">
+        <div class="container mx-auto flex justify-between items-center px-6">
+
+            <div class="flex flex-row gap-5">
+              <img class="w-10 h-10 whitespace-nowrap" src="./image/WhatsApp Image 2025-02-27 at 15.52.59.jpeg" alt="logo">
+               <a href="#" class="text-2xl font-bold text-orange-600">Parents Tranquilles</a>
+            </div>
+            <div class="space-x-6 hidden md:flex">
+                <a href="index.html" class="text-gray-700 hover:text-orange-500">Accueil</a>
+                <a href="apropos.html" class="text-gray-700 hover:text-orange-500">À propos</a>
+                <a href="contact.html" class="text-gray-700 hover:text-orange-500">Contact</a>
+                <a href="profil.html" class="text-gray-700 hover:text-orange-500">Nounou</a>
+                <a href="formulaire.html" class="bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition">S'inscrire</a>
+                
+                <div class="relative inline-block text-left">
+                    <button onclick="toggleLogin()" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+                      Connexion
+                    </button>
+                    <div id="loginMenu" class="absolute right-0 mt-2 w-80 bg-white border border-gray-200 rounded-xl shadow-lg p-4 hidden z-10">
+                      <h3 class="text-lg font-semibold mb-3">Connexion</h3>
+                      <input type="email" id="loginEmail" placeholder="Email" class="w-full mb-3 px-3 py-2 border rounded-md" />
+                      <button onclick="login()" class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700">
+                        Se connecter
+                      </button>
+                      <p class="text-sm text-gray-500 mt-2">Pas encore inscrit ? <a href="inscription.html" class="text-blue-600 underline">Inscrivez-vous</a></p>
+                    </div>
+                </div>
+                
+                 
+            </div>
+            <button class="md:hidden text-gray-700 focus:outline-none" id="menu-toggle">
+                ☰
+            </button>
+        </div>
+        <div class="hidden md:hidden flex flex-col items-center space-y-4 py-4" id="mobile-menu">
+            <a href="index.html" class="text-gray-700 hover:text-orange-500">Accueil</a>
+            <a href="apropos.html" class="text-gray-700 hover:text-orange-500">À propos</a>
+            <a href="contact.html" class="text-gray-700 hover:text-orange-500">Contact</a>
+            <a href="formulaire.html" class="bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition">S'inscrire</a>
+
+            <div class="relative inline-block text-left">
+                <button onclick="toggleLogin()" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+                  Connexion
+                </button>
+                <div id="loginMenu" class="absolute right-0 mt-2 w-80 bg-white border border-gray-200 rounded-xl shadow-lg p-4 hidden z-10">
+                  <h3 class="text-lg font-semibold mb-3">Connexion</h3>
+                  <input type="email" id="loginEmail" placeholder="Email" class="w-full mb-3 px-3 py-2 border rounded-md" />
+                  <button onclick="login()" class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700">
+                    Se connecter
+                  </button>
+                  <p class="text-sm text-gray-500 mt-2">Pas encore inscrit ? <a href="formulaire.html" class="text-blue-600 underline">Inscrivez-vous</a></p>
+                </div>
+            </div>
+            
+        </div>
+    </nav>
+<main>
+        <!-- apres la nav l'entete -->
+        <section class="grid grid-col m-10 gap-6 lg:flex">
+            <div class="min-w-[50%] mt-[11%] m-5">
+                <h1 class="font-bold text-5xl text-orange-400">Parents Tranquilles:</h1>
+                <h1 class="font-bold text-3xl text-orange-100">Un service de garde d'enfants fiable, flexible, et
+                    accessible!</h1>
+                <button
+                    class="w-[50%] h-[5vh] mt-5 hover:bg-orange-900 hover:text-white rounded-lg bg-orange-200 text-black lg:w-[20%] ">En
+                    savoir plus</button>
+
+            </div>
+            <div class="">
+                <img class="rounded-xl lg:mt-[10%] lg:m-5 lg:-ml-[5%]"
+                    src="https://img.freepik.com/free-photo/close-up-new-born-baby-with-mom_23-2151004148.jpg?ga=GA1.1.2065961177.1740732359&semt=ais_authors_boost" alt="">
+            </div>
+        </section>
+    </header>
+    <!-- avantage -->
+    <section class="">
+       
+        <div class="bg-gray-200 text-black py-20">
+            <h1 class="text-4xl pb-5 font-bold text-orange-500 text-center lg:text-6xl">Pourquoi nous choisir?</h1>
+            <h1 class="text-2xl text-orange-900 text-center lg:text-3xl">Découvrez ce qui nous rend uniques!</h1>
+
+            <div class="container  w-full lg:ml-[4%]  grid gap-8 grid-cols md:grid-col lg:grid-cols-3  lg:justify-center lg:flex">
+                <!-- card1 -->
+                <div class="border border-orange-500 ml-5 m-10 p-5 ">
+                    <i class="fa-solid fa-truck-fast w-[10%]"></i>
+                    <h1 class="font-bold text-orange-500 text-xl lg:text-4xl">Expérience professionnelle vérifiée </h1>
+                    <p class="lg:text-3xl text-orange-900">Nous privilégions les profils ayant une solide expérience dans la garde d'enfants, que ce soit en crèche, en école maternelle ou en tant que nounou professionnelle.</p>
+                </div>
+                <!-- card2 -->
+                <div class="border border-orange-500 ml-5 m-10 p-5 ">
+                    <i class="fa-solid fa-thumbs-up"></i>
+                    <h1 class="font-bold text-orange-500 text-xl lg:text-4xl">Vérification des antécédents</h1>
+                    <p class="text-3xl text-orange-900">Un contrôle approfondi est effectué afin de garantir l’absence de tout antécédent pouvant compromettre la sécurité des enfants.
+                    </p>
+                </div>
+
+                <!-- card3 -->
+                <div class="border border-orange-500 ml-5 m-10 p-5 ">
+                    <i class="fa-solid fa-star text-yellow-500"></i><i class="fa-solid fa-star text-yellow-500"></i><i class="fa-solid fa-star text-yellow-500"></i>
+                    <h1 class="font-bold text-orange-500 text-xl lg:text-4xl">Certifications et compétences</h1>
+                    <p class="text-3xl text-orange-900">Nous favorisons les nounous formées aux gestes de premiers secours et ayant des certifications en petite enfance.</p>
+                </div>
+
+                
+        </div>
+    </section>
+    <!-- nos services -->
+
+    <section class=" pt-[1%]">
+        <div class="grid grid-cols justify-center">
+
+            <h1 class="text-orange-100 text-3xl font-bold lg:text-5xl">Nos services</h1>
+            <p class="text-orange-100 text-xl font-bold  text-center lg:text-3xl">Nos nounous s'occupent de:</p>
+
+        </div>
+        <div
+            class="pt-[1%] grid grid-cols-1 lg:grid-cols-3 gap-2 max-w-6xl mx-auto lg:max-w-[80%] lg:flex lg:justify-center">
+
+            <div class="bg-orange-100 p-4 rounded-lg shadow-md">
+                <img class="" src="https://img.freepik.com/premium-photo/woman-adding-spices-herb-raw-salmon_53876-47530.jpg?ga=GA1.1.2065961177.1740732359&semt=ais_authors_boost" alt="">
+                <h2 class="font-bold text-2xl text-center pt-5 text-orange-900">La cuisine uniquement pour l'enfant</h2>
+
+            </div>
+
+
+            <div class="bg-orange-100 p-4 rounded-lg shadow-md">
+                <img src="https://img.freepik.com/premium-photo/walking-down-hallway-mother-holding-son39s-hand-boy-wearing-backpack_13339-371820.jpg?ga=GA1.1.2065961177.1740732359&semt=ais_authors_boost" alt="">
+                <h2 class="font-bold text-2xl text-center pt-5 text-orange-900">Accompagner l'enfant</h2>
+            </div>
+
+            <div class="bg-orange-100 p-4 rounded-lg shadow-md">
+                <img src="https://img.freepik.com/premium-photo/black-mom-boy-smile-hands-with-soap-home-hygiene-care-support-with-child-devel_1313853-137543.jpg?ga=GA1.1.2065961177.1740732359&semt=ais_authors_boost" alt="">
+                <h2 class="font-bold text-2xl text-center pt-5 text-orange-900">L'hygiène de l'enfant</h2>
+            </div>
+
+            <div class="bg-orange-100 p-4 rounded-lg shadow-md">
+                <img class="" src="https://img.freepik.com/free-photo/full-shot-smiley-mother-with-babies_23-2149657669.jpg?ga=GA1.1.2065961177.1740732359&semt=ais_authors_boost" alt="">
+                <h2 class="font-bold text-2xl text-center pt-5 text-orange-900">Assistance maternelle</h2>
+
+            </div>
+
+        </div>
+    </section>
+</main>
+
+    <!-- footer-->
+       
+    <footer class="bg-white py-6 text-center mt-10">
+        <div class="max-w-6xl mx-auto px-4">
+            <h3 class="text-2xl font-semibold text-orange-900">Parent-Tranquille</h3>
+            <p class="text-orange-900 mt-2 text-xl">Votre solution de nounous d'urgence, disponibles à tout moment pour veiller sur vos enfants.</p>
+            
+            <nav class="mt-4 text-xl">
+                <a href="index.html" class="text-orange-900 mx-3 hover:underline">À propos</a>
+                <a href="/services" class="text-orange-900 mx-3 hover:underline">Nos services</a>
+                <a href="/contact" class="text-orange-900 mx-3 hover:underline">Contact</a>
+                <a href="/faq" class="text-orange-900 mx-3 hover:underline">FAQ</a>
+            </nav>
+    
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="https://www.facebook.com/profile.php?id=61574600934646" target="_blank">
+                     <img src="image/téléchargement.png" alt="" class="w-6">
+                </a>
+    
+                <a href="https://api.whatsapp.com/send?phone=%2B2250500939269&context=AffxkncEkzjrFfsiVwNSD4pX5Bfx5P5WJ9ARQz38ARao8EFYloawyg3YgGiQ63cJFf81Msy2GFpzKoMk54BBDhqR51tDuQ1o5AmrEsG5mkIx7uxQiNpFprvU7ATKJd0aPfncIt-chHQunOQIpW5lycep2A&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwY2xjawJQ2ztleHRuA2FlbQIxMAABHQ7OORohdwz5t7wtb7yWk1S-PyoG_9IhTaupiS9D5YE5drbGt-gruKbgLQ_aem_KhQS8aSR5WhMvmGZ-4hScw" target="_blank">
+                    <img src="image/téléchargement.jpeg" alt="" class="w-6"> 
+                </a>
+    
+                <a href="#" target="_blank">
+                    <img src="image/téléchargement (2).png" alt="" class="w-6">
+                </a>
+            </div>
+    
+            <p class="text-orange-900 text-sm mt-4">&copy; 2025 Parent-Tranquille. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <div id="formContainer" class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+        <div class="bg-white p-6 rounded-lg shadow-lg w-96 max-w-full">
+            <h2 class="text-2xl font-bold text-center text-orange-500">Se connecter</h2>
+            <form class="mt-4" >
+                <label class="block text-gray-700">Nom</label>
+                <input type="text" class="w-full p-2 border rounded-md mb-2">
+                
+                <label class="block text-gray-700">Prénom</label>
+                <input type="text" class="w-full p-2 border rounded-md mb-2">
+                
+                <label class="block text-gray-700">Email</label>
+                <input type="email" class="w-full p-2 border rounded-md mb-2">
+                
+                <label class="block text-gray-700">Mot de passe</label>
+                <input type="password" class="w-full p-2 border rounded-md mb-4">
+                
+                <button id="createAccount" type="button" class="w-full bg-orange-900 text-white p-2 rounded-md hover:bg-orange-600">Connexion</button>
+            </form>
+            <button id="closeForm" class="mt-4 w-full text-gray-600 hover:text-gray-800">Fermer</button>
+        </div>
+    </div>
+
+
+<!--javascript-->
+
+    <script>
+        document.getElementById("menu-toggle").addEventListener("click", function() {
+            document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+
+document.getElementById("openForm").addEventListener("click", function (event) {
+    document.getElementById("formContainer").classList.remove("hidden");
+});
+
+// Empêche la fermeture quand on clique à l'intérieur du formulaire
+
+        // Empêcher la fermeture du formulaire en cliquant à l'intérieur
+        document.querySelector("#formContainer div").addEventListener("click", function(event) {
+            event.stopPropagation();
+        });
+
+// Ferme le formulaire quand on clique en dehors
+document.getElementById("formContainer").addEventListener("click", function () {
+    document.getElementById("formContainer").classList.add("hidden");
+});
+
+document.getElementById("closeForm").addEventListener("click", function () {
+    document.getElementById("formContainer").classList.add("hidden");
+});
+
+
+
+        const toggleBtn = document.querySelector(".toggle-button");
+        const dropdown = document.querySelector(".dropdown-menu");
+
+        toggleBtn.addEventListener("click", () => {
+            dropdown.classList.toggle('top-16');
+        });
+
+
+        function toggleLogin() {
+      const menu = document.getElementById("loginMenu");
+      menu.classList.toggle("hidden");
+
+      const email = localStorage.getItem("parentEmail");
+      if (email) {
+        document.getElementById("loginEmail").value = email;
+      }
+    }
+
+    function login() {
+      const email = document.getElementById("loginEmail").value;
+      const emailSaved = localStorage.getItem("parentEmail");
+
+      if (!email) {
+        alert("Veuillez entrer votre email.");
+        return;
+      }
+
+      if (emailSaved && email === emailSaved) {
+        alert("Connexion réussie !");
+      } else {
+        alert("Email inconnu. Veuillez vous inscrire.");
+        window.location.href = "formulaire.html";
+      }
+    }
+
+    window.addEventListener('click', function(e) {
+      const menu = document.getElementById("loginMenu");
+      const button = document.querySelector('button');
+      if (!menu.contains(e.target) && !button.contains(e.target)) {
+        menu.classList.add("hidden");
+      }
+    });
+    </script>
+</body>
+
+</html>
